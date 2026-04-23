@@ -59,11 +59,9 @@
   --bs-font-serif: "Times New Roman", Times, serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.15),
-    rgba(255, 255, 255, 0)
-  );
+  --bs-gradient: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0));
   --bs-body-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
@@ -91,9 +89,11 @@
 * {
   box-sizing: border-box;
 }
+
 img {
   max-width: 100%;
 }
+
 
 body {
   font-family: var(--bs-body-font-family);
@@ -110,11 +110,25 @@ a:hover {
   color: var(--bs-link-hover-color);
 }
 
+.disclaimer {
+  background-color: #c9c1a9;
+  text-align: left;
+  margin: 0;
+}
+
+
 /* Skip links styling */
+
+.skip-links {
+  background-color: #9f7f21;
+  padding-left: 1em;
+}
+
 .skip-links ul {
   list-style-type: none;
   margin: 0;
   padding-left: 0;
+  display: flex;
 }
 
 .skip-links a {
@@ -124,6 +138,7 @@ a:hover {
   right: 20px;
   top: -200px;
   z-index: -1;
+  color: white;
 }
 
 .skip-links a:focus {
@@ -133,13 +148,51 @@ a:hover {
 
 /* Title and logo styling */
 
+.global-header {
+  background-color: var(--bs-black);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem;
+}
+
+.global-header__right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.global-header__right .icon {
+  height: 35px;
+  width: 35px;
+}
+
+
+#global-nav-toggle {
+  background-color: var(--bs-black);
+  margin: 0;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+
 .site-title {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
-.site-title > span {
-  font-size: 1rem;
+
+.site-title>span {
+  font-size: 1.3rem;
+  font-weight: bold;
   margin-left: 0.3em;
+  color: var(--bs-white);
 }
 
 .logo {
@@ -150,6 +203,152 @@ a:hover {
   border-top: 34px solid var(--bs-light-green);
   border-left: 13px solid transparent;
   border-right: 13px solid transparent;
+}
+
+
+.global-nav {
+  display: none;
+}
+
+
+.park-info {
+  position: relative;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+#park-image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  height: 35rem;
+}
+
+#park-info__content {
+  background-color: rgba(15, 15, 15, 0.8);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.park-name {
+  font-size: 3rem;
+}
+
+.park-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.park-type,
+.states {
+  font-size: 1.1rem;
+  font-family: var(--bs-body-font-family);
+}
+
+#park-header {
+  background-color: var(--bs-black);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem;
+}
+
+#park-header a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  gap: 0.4rem;
+}
+
+#park-header a span {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+#park-header .icon {
+  height: 28px;
+  width: 28px;
+  fill: white;
+}
+
+
+
+/* Main Content Styling */
+#main {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-park-name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.park-description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.media-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.media-card .image-subtitle {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.media-card .subtitle-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.media-card .text-block {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+#park-footer {
+  background-color: var(--bs-black);
+  color: var(--bs-black);
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  background-color: #eac8ac;
+}
+
+.footer-subtitle {
+  font-weight: bold;
+
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Utility styles */
