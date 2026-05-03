@@ -27,7 +27,7 @@ export function parkMainTemplate(info) {
             </p>
         </div>
         <div class="media-card">
-            <img class="image-subtitle" src="${info.images[3].url}" alt="${info.images[3].altText}">
+            <img class="image-subtitle" src="${info.images[5].url}" alt="${info.images[3].altText}">
             <h2 class="subtitle-header">Visitor Centers ›</h2>
             <p class="text-block">
                 Learn about the visitor centers in the park.

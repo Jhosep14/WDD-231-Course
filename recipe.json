@@ -1,0 +1,74 @@
+{
+    "recipeName": "Chocolate Chip Cookies",
+    "ingredients": [
+        {
+            "name": "butter",
+            "quantity": "1lb",
+            "unit": "lb",
+            "preparation": "softened"
+        },
+        {
+            "name": "brown sugar",
+            "quantity": "1 1/2",
+            "unit": "cup"
+        },
+        {
+            "name": "white sugar",
+            "quantity": "1",
+            "unit": "cup"
+        },
+        {
+            "name": "eggs",
+            "quantity": "3",
+            "unit": ""
+        },
+        {
+            "name": "vanilla",
+            "quantity": "2",
+            "unit": "tsp"
+        },
+        {
+            "name": "baking soda",
+            "quantity": "1 1/2",
+            "unit": "tsp"
+        },
+        {
+            "name": "salt",
+            "quantity": "1/2",
+            "unit": "tsp"
+        },
+        {
+            "name": "flour",
+            "quantity": "5",
+            "unit": "cup"
+        },
+        {
+            "name": "semi-sweet chocolate chips",
+            "quantity": "2",
+            "unit": "cup"
+        },
+        {
+            "name": "shredded coconut",
+            "quantity": "1-2",
+            "unit": "cup"
+        }
+    ],
+    "instructions": [
+        {
+            "step": 1,
+            "instruction": "Cream the butter and sugar together, then beat in the eggs and vanilla"
+        },
+        {
+            "step": 2,
+            "instruction": "Mix in salt, soda and flour"
+        },
+        {
+            "step": 3,
+            "instruction": "Add chocolate chips and coconut"
+        },
+        {
+            "step": 4,
+            "instruction": "Bake 8-10 minutes at 350 F"
+        }
+    ]
+}

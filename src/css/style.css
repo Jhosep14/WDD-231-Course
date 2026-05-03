@@ -370,3 +370,33 @@ svg {
   background-color: var(--bs-black);
   fill: white;
 }
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #park-header {
+    gap: 0;
+    justify-content: space-around;
+  }
+
+  #park-image {
+    height: 25rem;
+  }
+
+  .park-name {
+    font-size: 2.2rem;
+  }
+
+  #park-info__content {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .park-type,
+  .states {
+    font-size: 1rem;
+  }
+}
