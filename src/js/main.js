@@ -1,21 +1,18 @@
 import { getParkData } from "./parkService.mjs";
 import { parkInfoTemplate, parkMainTemplate, parkFooterTemplate } from "./template.mjs";
 
-const parkData = getParkData();
+async function init() {
+    try {
+        const parkData = await getParkData();
+        const npsLink = document.getElementById("nps-link");
+        npsLink.href = parkData.url;
 
-// 1. Select the link element from the HTML
-const npsLink = document.getElementById("nps-link");
-
-// 2. Set the href attribute dynamically using the data
-npsLink.href = parkData.url;
-
-const parkImage = document.getElementById("park-image");
-parkImage.src = parkData.images[0].url;
-parkImage.alt = parkData.images[0].altText;
-
-
-
-parkInfoTemplate(parkData);
-parkMainTemplate(parkData);
-parkFooterTemplate(parkData);
-
+        parkInfoTemplate(parkData);
+        parkMainTemplate(parkData);
+        parkFooterTemplate(parkData);
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
+init();

@@ -1,0 +1,159 @@
+/* Title and logo styling */
+
+.global-header {
+  background-color: var(--bs-black);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem;
+}
+
+.global-header__right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.global-header__right .icon {
+  height: 35px;
+  width: 35px;
+}
+
+
+#global-nav-toggle {
+  background-color: var(--bs-black);
+  margin: 0;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+
+.site-title {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.site-title>span {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-left: 0.3em;
+  color: var(--bs-white);
+}
+
+.logo {
+  height: 0;
+  width: 0;
+  margin: 0.5em;
+  display: inline-block;
+  border-top: 34px solid var(--bs-light-green);
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+}
+
+
+.global-nav {
+  display: none;
+}
+
+
+.park-info {
+  position: relative;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+#park-image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  height: 35rem;
+}
+
+#park-info__content {
+  background-color: rgba(15, 15, 15, 0.8);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.park-name {
+  font-size: 3rem;
+}
+
+.park-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.park-type,
+.states {
+  font-size: 1.1rem;
+  font-family: var(--bs-body-font-family);
+}
+
+#park-header {
+  background-color: var(--bs-black);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem;
+}
+
+#park-header a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  gap: 0.4rem;
+}
+
+#park-header a span {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+#park-header .icon {
+  height: 28px;
+  width: 28px;
+  fill: white;
+}
+
+@media screen and (max-width: 768px) {
+  #park-header {
+    gap: 0;
+    justify-content: space-around;
+  }
+
+  #park-image {
+    height: 25rem;
+  }
+
+  .park-name {
+    font-size: 2.2rem;
+  }
+
+  #park-info__content {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .park-type,
+  .states {
+    font-size: 1rem;
+  }
+}

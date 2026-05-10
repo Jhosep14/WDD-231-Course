@@ -1,0 +1,19 @@
+#park-footer {
+  background-color: var(--bs-black);
+  color: var(--bs-black);
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  background-color: #eac8ac;
+}
+
+.footer-subtitle {
+  font-weight: bold;
+
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,34 @@
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.media-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.media-card .image-subtitle {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.media-card .subtitle-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.media-card .text-block {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  .media-grid {
+    grid-template-columns: 1fr;
+  }
+}

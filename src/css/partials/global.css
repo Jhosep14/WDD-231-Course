@@ -1,0 +1,61 @@
+/* Global styles */
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+body {
+  font-family: var(--bs-body-font-family);
+  font-size: 18px;
+  margin: 0;
+}
+
+a:link,
+a:visited {
+  color: var(--bs-link-color);
+}
+
+a:hover {
+  color: var(--bs-link-hover-color);
+}
+
+.disclaimer {
+  background-color: #c9c1a9;
+  text-align: left;
+  margin: 0;
+}
+
+
+/* Skip links styling */
+
+.skip-links {
+  background-color: #9f7f21;
+  padding-left: 1em;
+}
+
+.skip-links ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+}
+
+.skip-links a {
+  font-size: 11px;
+  font-size: 0.6875rem;
+  position: absolute;
+  right: 20px;
+  top: -200px;
+  z-index: -1;
+  color: white;
+}
+
+.skip-links a:focus {
+  top: 2px;
+  z-index: 9999;
+}
