@@ -1,0 +1,11 @@
+/* conditions.css */
+
+@import "partials/variables.css";
+@import "partials/global.css";
+@import "partials/header.css";
+@import "partials/footer.css";
+@import "partials/utilities.css";
+@import "home.css";
+@import "partials/alerts.css";
+@import "partials/visitor.css";
+@import "partials/activities.css";

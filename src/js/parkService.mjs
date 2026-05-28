@@ -12,7 +12,7 @@ export async function getParkData() {
 
   let data = {};
   try {
-    const response = await fetch(baseURL + "parks" + "?parkCode=acad", options);
+    const response = await fetch(baseURL + "parks" + "?parkCode=cany", options);
     if (response.ok) {
       data = await response.json();
     } else {
@@ -24,3 +24,29 @@ export async function getParkData() {
     throw err;
   }
 }
+
+export async function getConditionsData() {
+  const options = {
+    method: "GET",
+    headers: {
+      "X-Api-Key": apiKey,
+    },
+  };
+
+  try {
+    const [alertsResponse, vcResponse] = await Promise.all([
+      fetch(baseURL + "alerts" + "?parkCode=cany", options),
+      fetch(baseURL + "visitorcenters" + "?parkCode=cany", options)]);
+
+    const alertsData = alertsResponse.ok ? await alertsResponse.json() : { data: [] };
+    const vcData = vcResponse.ok ? await vcResponse.json() : { data: [] };
+    return { alertsData, vcData };
+  } catch (err) {
+    console.error("Error fetching data!");
+    throw err;
+  }
+}
+
+
+
+

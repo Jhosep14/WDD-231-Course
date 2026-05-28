@@ -1,0 +1,77 @@
+/* visitor.css */
+
+details[name="current-details"] {
+  border: 1px solid var(--bs-gray-200);
+  border-radius: 8px;
+  background-color: var(--bs-white);
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+details[name="current-details"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+details[name="current-details"] summary {
+  padding: 1rem 1.2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  user-select: none;
+}
+
+/* Custom indicator triangle */
+details[name="current-details"] summary::before {
+  content: "▶";
+  font-size: 0.8rem;
+  color: #333;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+details[name="current-details"][open] summary::before {
+  transform: rotate(90deg);
+}
+
+/* Visitor Center Specific Layout (matches image style, no bullets) */
+.visitor-center-list {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.visitor-center-item {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--bs-gray-200);
+}
+
+.visitor-center-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.visitor-center-item:first-child {
+  padding-top: 0.5rem;
+}
+
+.visitor-center-item h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 0 1rem 0;
+  color: #1a1a1a;
+}
+
+.visitor-center-item p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 1rem 0;
+}
+
+.visitor-center-item p:last-child {
+  margin-bottom: 0;
+}

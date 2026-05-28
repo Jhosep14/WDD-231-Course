@@ -1,5 +1,3 @@
-/* Global styles */
-
 * {
   box-sizing: border-box;
 }
@@ -13,6 +11,11 @@ body {
   font-family: var(--bs-body-font-family);
   font-size: 18px;
   margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--nps-heading-font);
+  color: #1a1a1a;
 }
 
 a:link,

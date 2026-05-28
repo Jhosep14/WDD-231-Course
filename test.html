@@ -1,19 +1,70 @@
+<!-- storage.html -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Extracting Data from APIs</title>
-    <script src="test.js" type="module"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>localStorage practice: ToDos</title>
+    <script src="storage.js" defer></script>
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .todos {
+            width: 300px;
+        }
+
+        .todos>li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid;
+            padding: 0.5em;
+        }
+
+        .todos p {
+            margin: 0;
+        }
+
+        .todos span {
+            cursor: pointer;
+        }
+
+        .strike {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        section {
+            padding: 10px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Extracting Data from APIs</h1>
-    <div id="output"></div>
-    <h2>Pokemon List</h2>
-    <ul id="outputList">
-    </ul>
+    <header>
+        <h1>ToDos</h1>
+        <p class="user">[user name here]</p>
+    </header>
+    <main>
+        <section>
+            <label for="userName">User Name</label>
+            <input name="userName" id="userName" />
+            <button id="submitUser">Set User</button>
+        </section>
+        <section>
+            <label for="name">Enter Name</label>
+            <input name="name" id="name" />
+            <label for="todo">Enter Task</label>
+            <input name="todo" id="todo" />
+            <button id="submitTask">Enter</button>
+        </section>
+        <ul id="todoList" class="todos"></ul>
+    </main>
 </body>
 
 </html>
