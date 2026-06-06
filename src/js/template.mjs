@@ -65,6 +65,7 @@ export function parkFooterTemplate(info) {
 }
 
 /* Conditions pages templates --------------------------------------------------------*/
+
 export function ConditionsMain(info, conditionsData) {
     const mainSection = document.getElementById("main");
     const alertsData = conditionsData.alertsData;
@@ -141,3 +142,4 @@ export function ConditionsMain(info, conditionsData) {
             </details>
         </section>`;
 }
+

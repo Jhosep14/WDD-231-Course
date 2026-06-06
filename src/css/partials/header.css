@@ -3,6 +3,7 @@
   background-size: cover;
   background-position: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 0.3rem;
@@ -20,16 +21,6 @@
 }
 
 
-#global-nav-toggle {
-  background-color: var(--bs-black);
-  margin: 0;
-  color: white;
-  border: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-}
 
 
 .site-title {
@@ -53,11 +44,6 @@
   border-top: 34px solid var(--bs-light-green);
   border-left: 13px solid transparent;
   border-right: 13px solid transparent;
-}
-
-
-.global-nav {
-  display: none;
 }
 
 
