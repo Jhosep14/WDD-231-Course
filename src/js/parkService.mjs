@@ -10,18 +10,13 @@ export async function getParkData() {
     },
   };
 
-  let data = {};
-  try {
-    const response = await fetch(baseURL + "parks" + "?parkCode=cany", options);
-    if (response.ok) {
-      data = await response.json();
-    } else {
-      const errText = await response.text();
-      throw new Error(`API Error ${response.status}: ${response.statusText}. Details: ${errText}`);
-    }
+  const response = await fetch(baseURL + "parks" + "?parkCode=cany", options);
+  if (response.ok) {
+    const data = await response.json();
     return data.data[0];
-  } catch (err) {
-    throw err;
+  } else {
+    const errText = await response.text();
+    throw new Error(`API Error ${response.status}: ${response.statusText}. Details: ${errText}`);
   }
 }
 
