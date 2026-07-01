@@ -1,0 +1,140 @@
+@import "style.css";
+@import "home.css";
+
+.visitor-center-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.visitor-center__info h1 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.visitor-center__info p {
+    font-family: var(--font-secondary);
+    font-size: 1.5rem;
+}
+
+.visitor-center__article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.visitor-center__image {
+    width: 60vw;
+    height: 35vw;
+    object-fit: cover;
+}
+
+/* Accordion Container */
+.visitor-center__details-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+/* Accordion Details Elements */
+.vc-details {
+    border-top: 1px solid #ccc;
+    margin-top: -1px;
+    /* collapse double borders */
+}
+
+.vc-details:last-child {
+    border-bottom: 1px solid #ccc;
+}
+
+.vc-details summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 0;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    list-style: none;
+    /* Hide default triangle */
+}
+
+.visitor-center__description {
+    text-align: center;
+    width: 60vw;
+}
+
+/* For Safari/older browsers */
+.vc-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.vc-details-summary-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+
+/* Rotate chevron when open */
+.vc-details[open] summary .chevron {
+    transform: rotate(180deg);
+}
+
+/* Content inside the accordion */
+.vc-details-content {
+    padding: 0 0 2rem 2rem;
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Inner Address Styling */
+.vc-address {
+    margin-bottom: 1.5rem;
+}
+
+.vc-address h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.vc-address address {
+    font-style: normal;
+}
+
+/* Inner Gallery Styling */
+.vc-gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.visitor-center__gallery__image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.icon_vc {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: white;
+}
+
+
+/* SVG Fallback */
+.icon_vc_detail,
+.chevron {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+    stroke: currentColor;
+    /* Fallback to black if currentColor fails */
+    background-color: white;
+}

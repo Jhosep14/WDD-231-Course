@@ -105,7 +105,7 @@ export function ConditionsMain(info, conditionsData) {
     const visitorHtml = vcData && vcData.data.length > 0
         ? vcData.data.map(vc => `
             <div class="visitor-center-item">
-                <h3>${vc.name}</h3>
+                <a href="visitor-center.html?id=${vc.id}"><h3>${vc.name}</h3></a>
                 <p>${vc.description}</p>
                 ${vc.directionsInfo ? `<p>${vc.directionsInfo}</p>` : ""}
             </div>
